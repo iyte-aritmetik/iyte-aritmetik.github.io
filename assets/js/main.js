@@ -110,19 +110,42 @@ jQuery(document).ready(function ($) {
     });
 
 
-// main-menu-scroll
+// main-menu-scroll + auto-hide header (visible at the top of the page,
+// hidden once scrolled down, revealed again by hovering near the top edge)
 
-    jQuery(window).scroll(function () {
+    var $autohideHeader = jQuery('.header.navbar-fixed-top');
+    jQuery('<div class="nav-hover-zone"></div>').prependTo('body');
+    var navHideTimeout;
+
+    function updateHeaderScrollState() {
         var top = jQuery(document).scrollTop();
         var height = 5;
-        //alert(batas);
 
         if (top > height) {
-            jQuery('.navbar-fixed-top').addClass('menu-scroll');
+            $autohideHeader.addClass('menu-scroll').addClass('nav-autohide');
         } else {
-            jQuery('.navbar-fixed-top').removeClass('menu-scroll');
+            $autohideHeader.removeClass('menu-scroll').removeClass('nav-autohide');
         }
-    });
+    }
+
+    jQuery(window).scroll(updateHeaderScrollState);
+    updateHeaderScrollState();
+
+    function showAutohideHeader() {
+        clearTimeout(navHideTimeout);
+        $autohideHeader.addClass('nav-visible');
+    }
+
+    function scheduleHideAutohideHeader() {
+        clearTimeout(navHideTimeout);
+        navHideTimeout = setTimeout(function () {
+            $autohideHeader.removeClass('nav-visible');
+        }, 300);
+    }
+
+    jQuery('.nav-hover-zone, .header.navbar-fixed-top')
+        .on('mouseenter', showAutohideHeader)
+        .on('mouseleave', scheduleHideAutohideHeader);
 
 // scroll Up
 
