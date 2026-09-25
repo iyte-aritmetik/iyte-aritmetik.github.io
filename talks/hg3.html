@@ -1,0 +1,221 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>İYTE Aritmetik</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+        <!--Google fonts links-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+
+        <link rel="stylesheet" href="../assets/css/fonticons.css">
+        <link rel="stylesheet" href="../assets/css/slider-pro.css">
+        <!--<link rel="stylesheet" href="assets/css/stylesheet.css">-->
+        <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+
+
+        <!--For Plugins external css-->
+        <link rel="stylesheet" href="../assets/css/plugins.css" />
+
+        <!--Theme custom css -->
+        <link rel="stylesheet" href="../assets/css/style.css">
+
+        <!--Theme Responsive css-->
+        <link rel="stylesheet" href="../assets/css/responsive.css" />
+
+        <script src="../assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body data-spy="scroll" data-target=".navbar-collapse">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class='preloader'><div class='loaded'>&nbsp;</div></div>
+        <header id="main_menu" class="header navbar-fixed-top">            
+            <div class="main_menu_bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="nave_menu">
+                            <nav class="navbar navbar-default" id="navmenu">
+                                <div class="container-fluid">
+                                    <!-- Brand and toggle get grouped for better mobile display -->
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                            <span class="sr-only">Toggle navigation</span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                        </button>
+                                        <a class="navbar-brand" href="../index.html">
+                                            <img src="../assets/images/logo.png"/>
+                                        </a>
+                                    </div>
+
+                                    <!-- Collect the nav links, forms, and other content for toggling -->
+
+
+
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                        <ul class="nav navbar-nav navbar-right">
+                                            <li><a href="hakkımızda.html">Hakkımızda</a></li>
+                                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Kişiler</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="../service.html">Yönetim</a></li>
+                                                    <li><a href="../service1.html">Konuşmacılar</a></li>
+                                                </ul>
+                                            </li>
+                                            
+                                            <li><a href="../work.html">Seminerler</a></li>
+                                            <li><a href="../contact.html">İletişim</a></li>
+                                        </ul>    
+                                    </div>
+
+                                </div>
+                            </nav>
+                        </div>	
+                    </div>
+
+                </div>
+
+            </div>
+        </header> <!--End of header -->
+        <section class="seminars bg-gray-50 text-gray-800" style="padding-top: 170px; padding-bottom: 60px; font-family: 'Montserrat', sans-serif;">
+            
+            <div class="flex justify-center space-x-4 mb-8 text-center" style="display: flex; justify-content: center; gap: 20px; margin-bottom: 30px;">
+                <a href="../assets/files/abstracts/HG-Abstract-WordsThatRefuseToRepeat.pdf" download class="btn btn-primary" style="background-color: #007bff; border-color: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: 600;">
+                    <i class="fa fa-download"></i> Özeti İndir
+                </a>
+                
+                
+            </div>
+            
+            
+            <div class="container mx-auto p-4 sm:p-6 lg:p-8">
+                <h1 class="text-3xl font-bold text-center text-gray-900 mb-8">Seminer Notu</h1>
+
+                <style>
+                    /* PDF Okuyucu için özel bölüm */
+                    .pdf-section {
+                        /* Flexbox'ı etkinleştirerek içindeki elemanları kontrol etmeyi sağlar */
+                        display: flex;
+                        
+                        /* Yönü dikey yapar, böylece başlık, butonlar ve PDF alt alta hizalanır */
+                        flex-direction: column; 
+                        
+                        /* İçeriği yatay eksende ortalar (Bu, içindeki tüm flex öğelerini, yani container'ı ortalar) */
+                        align-items: center; 
+                        
+                        /* Bölümün en az ekran yüksekliği kadar yer kaplamasını sağlar */
+                        min-height: 100vh; 
+                        
+                        /* Sitenizin üst kısmında sabit bir menü varsa, PDF'in menü altına gelmemesi için üstten boşluk bırakır. */
+                        padding-top: 100px; /* Sabit menü altından başlar */
+                        padding-bottom: 50px; 
+                        box-sizing: border-box;
+                        width: 100%; /* Tam genişlik kullanır */
+                    }
+
+                    /* İçerik Container'ı (PDF ve butonları barındıran) */
+                    .pdf-section .container {
+                        /* Container'ın boyutu belirlendiğinde otomatik olarak ortalanmasını sağlar */
+                        margin-left: auto;
+                        margin-right: auto;
+                        
+                        /* Maksimum genişliği belirleyerek büyük ekranlarda çok yayılmasını engeller */
+                        max-width: 960px; /* Ya da istediğiniz bir değer */
+                        width: 100%; /* Ekran küçüldükçe esnemesini sağlar */
+                        padding: 0 15px; /* Yanlardan boşluk bırakır (Bootstrap uyumlu) */
+                    }
+
+                    /* PDF'i gösterecek olan iframe'in stilleri */
+                    .pdf-viewer {
+                        /* iframe'in container'ın tamamını kaplamasını sağlar */
+                        width: 100%; 
+                        
+                        /* Yüksekliği ekranın %80'i olarak ayarlar, böylece büyük/küçük cihazlara göre ölçeklenir */
+                        height: 80vh; 
+                        
+                        border: 1px solid #ccc;
+                        box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
+                        
+                        /* Ortalama için eklenmiştir, display: block ile tam satır kaplaması ve margin: auto ile yatayda ortalanması sağlanır */
+                        display: block; 
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                </style>
+
+                <section class="pdf-section">
+                    <div class="container">
+                        <iframe class="pdf-viewer" src="../assets/files/abstracts/HG-Abstract-WordsThatRefuseToRepeat.pdf" title="PDF Görüntüleyici"></iframe>
+                    </div>
+                </section>
+            </div>
+        </section>        
+
+        <!-- footer Section -->
+        <footer id="footer" class="footer">
+            <div class="container">
+                <div class="main_footer">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="copyright_text text-center">
+                                <p class=" wow fadeInRight" data-wow-duration="1s">Made with <i class="fa fa-heart"></i> by Doruk Üstündağ 2025. All Rights Reserved</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- End of container -->
+        </footer><!-- End of footer -->
+
+
+
+        <!-- START SCROLL TO TOP  -->
+
+        <div class="scrollup">
+            <a href="#"><i class="fa fa-chevron-up"></i></a>
+        </div>
+
+        <script src="../assets/js/vendor/jquery-1.11.2.min.js"></script>
+        <script src="../assets/js/vendor/bootstrap.min.js"></script>
+
+        <script src="../assets/js/jquery.easing.1.3.js"></script>
+        <script src="../assets/js/masonry/masonry.min.js"></script>
+        <script type="text/javascript">
+            $('.mixcontent').masonry();
+        </script>
+
+        <script src="../assets/js/jquery.sliderPro.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function ($) {
+                $('#example3').sliderPro({
+                    width: 960,
+                    height: 200,
+                    fade: true,
+                    arrows: false,
+                    buttons: true,
+                    fullScreen: false,
+                    shuffle: true,
+                    smallSize: 500,
+                    mediumSize: 1000,
+                    largeSize: 3000,
+                    thumbnailArrows: true,
+                    autoplay: false,
+                    thumbnailsContainerSize: 960
+
+                });
+            });
+        </script>
+        <script src="../assets/js/plugins.js"></script>
+        <script src="../assets/js/main.js"></script>
+
+    </body>
+</html>
